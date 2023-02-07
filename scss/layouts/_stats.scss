@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.stats{
+    padding-inline: 4.5rem;
+    @include flex(space-evenly, start, column);
+    gap:4rem;
+
+    @include mq(medium){
+        @include flex(null, start, row);
+    }
+
+    &__container{
+        padding: 2rem;
+
+    }
+ 
+    &__icon{
+        width: 3rem;
+    }
+
+    &__number{
+        font-size: 4rem;
+    }
+
+    &__text{
+        color: $grey;
+    }
+
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+
+// COLORS
+
+$pink: hsl(322, 100%, 66%);
+$light-pink: hsl(321, 100%, 78%);
+$light-red: hsl(0, 100%, 63%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$very-pale-blue: hsl(207, 100%, 98%);
+$light-bluish: hsl(210, 88%, 65%);
+$grey: hsl(207, 4%, 53%);
+$white: hsl(0, 0%, 100%);
+
+// FONT
+
+$font-family1: 'Open Sans', sans-serif;
+$font-family2: 'Poppins', sans-serif;
+$fw--600: 600;
+$fw--700: 700;
+
+// BREAKPOINTS
+
+$breakpoints: (
+    "small": 24rem,
+    "medium": 48rem,
+    "large": 64rem,
+)

@@ -1,0 +1,36 @@
+@use "./variables" as *;
+
+
+@mixin flex($content,$align,$direction){
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin grid(){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 10rem;
+}
+
+@mixin before-after(){
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 7rem;
+}
+
+@mixin transition-ease($property){
+    transition: $property 0.5s ease-in-out;
+}
+
+@mixin mq($key){
+    $size: map-get($breakpoints, $key);
+
+    @media only screen and (min-width: $size){
+        @content;
+    }
+}

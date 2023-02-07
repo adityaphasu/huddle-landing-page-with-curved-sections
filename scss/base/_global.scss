@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+body{
+    font-family: $font-family1;
+    font-size: 0.928rem;
+    color: $very-dark-cyan;
+    text-align: center;
+}
+
+h1,
+h2{
+    font-family: $font-family2;
+}
+
+a{
+    font-size: 0.825rem;
+    text-decoration: none;
+    color: inherit;
+}

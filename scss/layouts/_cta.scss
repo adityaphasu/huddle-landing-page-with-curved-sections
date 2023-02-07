@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.cta{
+    padding: 2rem 0 10rem;
+
+    @include mq(small){
+      padding-bottom: 15rem;
+    }
+
+    &__heading{
+        padding: 2rem 0 3rem;
+
+        @include mq(large){
+            font-size: 2rem;
+        }
+    }
+}

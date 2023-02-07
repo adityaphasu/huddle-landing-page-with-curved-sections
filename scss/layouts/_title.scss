@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.title{
+    padding: 6.2rem 1.3rem;
+
+    &__heading{
+
+        @include mq(large){
+          font-size: 2.2rem;
+        }
+    }
+
+    &__text{
+        padding: 2.25rem 0 4rem;
+
+        @include mq(large){
+            width: 29rem;
+            margin: auto;
+        }
+    }
+
+    &__img{
+        padding-block: 6.4rem;
+        
+        @include mq(large){
+            max-width: 55%;
+            margin: auto;
+        }
+    }
+
+}

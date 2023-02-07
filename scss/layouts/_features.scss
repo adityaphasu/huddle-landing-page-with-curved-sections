@@ -1,0 +1,78 @@
+@use "../abstracts" as *;
+
+.features{
+    padding: 6rem 0 2rem;
+
+    @include mq(large){
+        text-align: left;
+    }
+
+    &__wrapper{
+
+        &:nth-of-type(odd)::before, &:nth-of-type(odd)::after{
+            @include before-after;
+            @include mq(small){
+                height: 10rem;
+            }
+        }
+        
+        &:nth-of-type(1)::before{
+          background-image: url("/assets/images/bg-section-top-mobile-1.svg");
+          @include mq(small){
+            background-image: url("/assets/images/bg-section-top-desktop-1.svg");
+          }
+        }
+
+        &:nth-of-type(1)::after{
+            background-image: url("/assets/images/bg-section-bottom-mobile-1.svg");
+            @include mq(small){
+                background-image: url("/assets/images/bg-section-bottom-desktop-1.svg");
+            }
+        }
+
+        &:nth-of-type(3)::before{
+            background-image: url("/assets/images/bg-section-top-mobile-2.svg");
+            background-size: cover;
+            @include mq(small){
+                background-image: url("/assets/images/bg-section-top-desktop-2.svg");
+            }
+        }
+  
+        &:nth-of-type(3)::after{
+            background-image: url("/assets/images/bg-section-bottom-mobile-2.svg");
+            @include mq(small){
+              background-image: url("/assets/images/bg-section-bottom-desktop-2.svg");
+            }
+        }
+    }
+
+    &__content{
+        padding: 5rem 1.2rem;
+
+        @include mq(large){
+           padding: 5rem 9.5rem;
+           @include grid();
+        }
+
+        &--blue{
+            background-color: $very-pale-blue;
+        }  
+    }
+
+    &__info{
+        &--gridrow1{
+            @include mq(large){
+            grid-row: 1 / 1;
+          }
+        }   
+    }
+
+    &__heading{
+        padding: 6rem 0 1rem;
+
+        @include mq(large){
+            font-size: 2rem;
+        }
+    }
+    
+}
