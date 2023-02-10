@@ -1,47 +1,69 @@
 @use "../abstracts" as *;
 
-.form{
-    padding: 2rem 0 5rem;
+.form {
+  padding: 2rem 0 5rem;
+  position: relative;
 
-    
-    &__heading{
-        text-transform: uppercase;
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding-block: 1.5rem;
+
+    @include mq(large) {
+      width: 22rem;
+    }
+  }
+
+  &__container {
+    @include flex(center, flex-end, column);
+
+    @include mq(large) {
+      @include flex(center, center, row);
     }
 
-    &__text{
-        padding-block: 1.5rem;
+    & > * {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border-radius: 0.3rem;
+      border: none;
+    }
+  }
 
-        @include mq(large){
-            width: 22rem
-        }
-    }
-     
-    &__container{
-        @include flex(center, end, column);
-        
-        @include mq(large){
-            @include flex(center, center, row);
-        }
-        
-        & > *{
-          padding: 0.5rem;
-          margin: 0.5rem 0;
-          border-radius: 0.3rem;
-          border: none;
-        } 
-    }
-  
-    &__input{
-        width: 100%;
+  &__input {
+    width: 100%;
+    outline: none;
+    @include border(transparent);
+
+    &--error {
+      @include border($light-red);
     }
 
-    &__btn{
-        padding-inline: 2.7rem;
-
-        @include mq(large){
-            transform: translateX(20%) ;
-        }
+    &--success {
+      @include border($green);
     }
+  }
 
+  &__btn {
+    padding-inline: 2.7rem;
 
+    @include mq(large) {
+      transform: translateX(20%);
+    }
+  }
+
+  &__error {
+    color: $light-red;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 5.5rem;
+    @include mq(small) {
+      bottom: 0;
+    }
+    @include mq(medium) {
+      bottom: 2.8rem;
+    }
+  }
 }

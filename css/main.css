@@ -21,7 +21,9 @@ a {
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -29,7 +31,8 @@ a {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -38,16 +41,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -84,6 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .form {
   padding: 2rem 0 5rem;
+  position: relative;
 }
 .form__heading {
   text-transform: uppercase;
@@ -99,7 +116,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .form__container {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   flex-direction: column;
 }
 @media only screen and (min-width: 64rem) {
@@ -118,6 +135,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .form__input {
   width: 100%;
+  outline: none;
+  border: 2px solid transparent;
+}
+.form__input--error {
+  border: 2px solid hsl(0deg, 100%, 63%);
+}
+.form__input--success {
+  border: 2px solid hsl(113deg, 95%, 39%);
 }
 .form__btn {
   padding-inline: 2.7rem;
@@ -125,6 +150,23 @@ p, h1, h2, h3, h4, h5, h6 {
 @media only screen and (min-width: 64rem) {
   .form__btn {
     transform: translateX(20%);
+  }
+}
+.form__error {
+  color: hsl(0deg, 100%, 63%);
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 5.5rem;
+}
+@media only screen and (min-width: 24rem) {
+  .form__error {
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .form__error {
+    bottom: 2.8rem;
   }
 }
 
@@ -180,14 +222,14 @@ p, h1, h2, h3, h4, h5, h6 {
   padding-inline: 4.5rem;
   display: flex;
   justify-content: space-evenly;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   gap: 4rem;
 }
 @media only screen and (min-width: 48rem) {
   .stats {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: row;
   }
 }
