@@ -1,74 +1,73 @@
 @use "../abstracts" as *;
 
-.footer{
+.footer {
     text-align: left;
     background-color: $very-dark-cyan;
     color: $very-pale-blue;
     position: relative;
     padding: 1rem 1.5rem;
 
-    @include mq(large){
+    @include mq(large) {
         @include grid();
         padding: 2rem 9.5rem;
 
-        &__contact-wrapper{
-           margin-top: 7.5rem;
-           grid-row: 1 ;
+        &__contact-wrapper {
+            margin-top: 7.5rem;
+            grid-row: 1;
         }
     }
 
-    &::before{
-       @include before-after;
-       position: absolute;
-       top: -3rem;
-       left: 0;
-       background-image: url("/assets/images/bg-footer-top-mobile.svg");
-       
-       @include mq(small){
-        background-image: url("/assets/images/bg-footer-top-desktop.svg");
-        background-size: 100% 100%;
-        top: -6.8rem;
-       }
+    &::before {
+        @include before-after;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        background-image: url("/assets/images/bg-footer-top-mobile.svg");
+
+        @include mq(small) {
+            background-image: url("/assets/images/bg-footer-top-desktop.svg");
+            background-size: 100% 100%;
+            top: -6.8rem;
+        }
     }
-    
-    &__logo{
+
+    &__logo {
         filter: brightness(0) invert(100%);
         max-width: 64%;
         padding-bottom: 0.5rem;
     }
 
-    &__text{
+    &__text {
         padding-block: 1rem;
-        @include mq(large){
+        @include mq(large) {
             width: 20rem;
         }
     }
 
-    &__contact{
-        
-        &-info{
+    &__contact {
+        &-info {
             padding-block: 0.5rem;
         }
 
-        &-icon{
+        &-icon {
             display: inline-block;
             padding-right: 1rem;
         }
     }
 
-    &__social{
+    &__social {
         padding: 2rem 0;
 
-        @include mq(large){
+        @include mq(large) {
             padding: 4rem 0;
         }
 
-        &-icon{
+        &-icon {
             margin-right: 1rem;
             @include transition-ease(color);
 
-            &:hover{
-               color: $light-bluish;
+            &:hover {
+                color: $light-bluish;
             }
         }
     }

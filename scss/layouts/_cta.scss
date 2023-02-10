@@ -1,16 +1,16 @@
 @use "../abstracts" as *;
 
-.cta{
+.cta {
     padding: 2rem 0 10rem;
 
-    @include mq(small){
-      padding-bottom: 15rem;
+    @include mq(small) {
+        padding-bottom: 15rem;
     }
 
-    &__heading{
+    &__heading {
         padding: 2rem 0 3rem;
 
-        @include mq(large){
+        @include mq(large) {
             font-size: 2rem;
         }
     }

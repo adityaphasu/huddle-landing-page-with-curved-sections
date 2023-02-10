@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-body{
+body {
     font-family: $font-family1;
     font-size: 0.928rem;
     color: $very-dark-cyan;
@@ -8,11 +8,11 @@ body{
 }
 
 h1,
-h2{
+h2 {
     font-family: $font-family2;
 }
 
-a{
+a {
     font-size: 0.825rem;
     text-decoration: none;
     color: inherit;
